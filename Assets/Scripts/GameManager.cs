@@ -5,9 +5,12 @@ public class GameManager : MonoBehaviour
 {
    
     
+   public LevelLoader levelLoader; 
+
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        int firstLevelIndex = 1; // Usually the scene after the Main Menu
+        levelLoader.StartTransition(firstLevelIndex);
     }
     public void Story()
     {
