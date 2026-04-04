@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b947bca48b6144bb3c84f10efd7c70, type: 3}
+  m_Name: Thorne'sAppointmentDiary
+  m_EditorClassIdentifier: Assembly-CSharp::EvidenceItem
+  evidenceID: Thorne_diary
+  displayName: Thorne Appointemnet diary
+  targetSuspect: Graves
+  suspicionScore: 8
+  category: Major
+  isAutoDiscovery: 0
+  searchTimeInSeconds: 120
+  officerScript: "Found his diary in the desk drawer. He kept meticulous records
+    \u2014 every appointment, every meeting. Tonight's entry: 7:10 PM, Mrs. Graves.
+    He called her in specifically."

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b947bca48b6144bb3c84f10efd7c70, type: 3}
+  m_Name: SmugglingCrates
+  m_EditorClassIdentifier: Assembly-CSharp::EvidenceItem
+  evidenceID: smuggling_crates
+  displayName: smuggling crates
+  targetSuspect: Bell
+  suspicionScore: 10
+  category: Major
+  isAutoDiscovery: 0
+  searchTimeInSeconds: 20
+  officerScript: "The glass on his desk \u2014 there's brandy in it, half finished.
+    I leaned close. Something underneath the alcohol. Bitter. Sharp. That's not the
+    drink."

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Scene1.unity
+    path: Assets/Scenes/TalkOfficer.unity
     guid: 3952b759946a86f43b6a61df4871d83a
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Investigation HUD.unity
     guid: 8d73a05abe7d9da4bbf758f2f53f415a
+  - enabled: 1
+    path: Assets/Scenes/SearchEvidence.unity
+    guid: 90568cb2a54b58049a711c3a91ac0aeb
+  - enabled: 1
+    path: Assets/Scenes/Accuse Scene.unity
+    guid: b89c444750d3f50429aa7f9764e9ec42
+  - enabled: 1
+    path: Assets/Scenes/CurrentStory.unity
+    guid: d104fc07261fed54f84e404c56df5aa6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

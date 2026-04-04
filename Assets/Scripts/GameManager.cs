@@ -2,15 +2,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
-{
-   
-    
-   public LevelLoader levelLoader; 
+{  
+      public static GameManager Instance;
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // kill duplicates
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // persist across scenes
+    }
+    //logic script starts here
+  // public LevelLoader levelLoader; 
 
     public void StartGame()
     {
-        int firstLevelIndex = 1; // Usually the scene after the Main Menu
-        levelLoader.StartTransition(firstLevelIndex);
+        SceneManager.LoadScene("MainMenu");
     }
     public void Story()
     {
@@ -20,5 +30,5 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
 }

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b947bca48b6144bb3c84f10efd7c70, type: 3}
+  m_Name: TornManuscript
+  m_EditorClassIdentifier: Assembly-CSharp::EvidenceItem
+  evidenceID: torn_manuscript
+  displayName: torn Manuscript
+  targetSuspect: Arjun
+  suspicionScore: 8
+  category: Major
+  isAutoDiscovery: 1
+  searchTimeInSeconds: 0
+  officerScript: "There's a manuscript open on the desk. Historical records, by the
+    look of it. But page 42 is gone \u2014 torn out cleanly. This wasn't an accident.
+    Someone removed it and they knew exactly what they were taking."
