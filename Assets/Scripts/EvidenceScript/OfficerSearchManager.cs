@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro; 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class OfficerSearchManager : MonoBehaviour
 {
@@ -106,5 +107,9 @@ public class OfficerSearchManager : MonoBehaviour
         discoveryQueue.Add(item);
         ShowNextDiscovery();
         searchButton.interactable = true;
+    }
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

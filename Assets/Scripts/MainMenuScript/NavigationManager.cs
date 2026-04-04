@@ -143,7 +143,7 @@ public class NavigationManager : MonoBehaviour
     }
     public void AccuseScene()
     {
-        SceneManager.LoadScene("Accuse Scene");
+        SceneManager.LoadScene("CaseFile");
     }
     public void CurrentStoryScene()
     {

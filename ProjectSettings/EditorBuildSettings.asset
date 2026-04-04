@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SearchEvidence.unity
     guid: 90568cb2a54b58049a711c3a91ac0aeb
   - enabled: 1
-    path: Assets/Scenes/Accuse Scene.unity
+    path: Assets/Scenes/CaseFile.unity
     guid: b89c444750d3f50429aa7f9764e9ec42
   - enabled: 1
     path: Assets/Scenes/CurrentStory.unity
