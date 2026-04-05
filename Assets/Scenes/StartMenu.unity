@@ -788,6 +788,8 @@ GameObject:
   m_Component:
   - component: {fileID: 897654568}
   - component: {fileID: 897654567}
+  - component: {fileID: 897654570}
+  - component: {fileID: 897654569}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -807,7 +809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161b82d1cb6b344409f54e05e87e7835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  levelLoader: {fileID: 0}
 --- !u!4 &897654568
 Transform:
   m_ObjectHideFlags: 0
@@ -823,6 +824,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &897654569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897654566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54445eb4e8060ed4395e9683702c0d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameBootstrap
+--- !u!114 &897654570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897654566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b0d835d70fd89e4e913cb8346552bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::APIManager
+  baseUrl: https://gameaitesting-production.up.railway.app
+  timeoutSeconds: 20
 --- !u!1 &1288813445
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LocationNavigator : MonoBehaviour
 {
-    public OfficerSearchManager searchManager;
+   // public OfficerSearchManager searchManager;
     public GameObject storageButton;
 
     [Header("Room Configurations")]
@@ -24,7 +24,7 @@ public class LocationNavigator : MonoBehaviour
         Camera.main.transform.position = new Vector3(storageRoom.roomCoordinates.x, storageRoom.roomCoordinates.y, -10f);
 
         // 2. Data Swap
-        searchManager.SwitchLocation(storageRoom.storageEvidence);
+       // searchManager.SwitchLocation(storageRoom.storageEvidence);
 
         // 3. UI Cleanup
         storageButton.SetActive(false);

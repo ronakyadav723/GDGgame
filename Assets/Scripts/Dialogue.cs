@@ -56,5 +56,13 @@ public class Dialogue : MonoBehaviour
             
         }
     }
+    public void StartWithText(string fullText)
+ {
+     lines = new string[] { fullText };
+     index = 0;
+     textcomponent.text = string.Empty;
+     StopAllCoroutines();
+    StartCoroutine(TypeLine());
+ }
 
 }
