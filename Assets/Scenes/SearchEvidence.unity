@@ -419,59 +419,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162096148}
   m_CullTransparentMesh: 1
---- !u!1 &247571484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 247571486}
-  - component: {fileID: 247571485}
-  m_Layer: 0
-  m_Name: StudyLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &247571485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247571484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d2991be9d8795140ba8e80c758ec3d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StudyLocationManager
-  studyEvidence:
-  - {fileID: 11400000, guid: 379ed7d72111c4248b96c01d77fe7d5f, type: 2}
-  - {fileID: 11400000, guid: 3f6f76974605a2a44be3a90044b891eb, type: 2}
-  - {fileID: 11400000, guid: 564585bbd2e1c914dbd3fa13bdfb3331, type: 2}
-  - {fileID: 11400000, guid: cb1a03ecc4d6ff64189d309cb0757ae9, type: 2}
-  storageRoomButton: {fileID: 1856598402}
-  storageRoomCoordinates: {x: 25, y: 0}
-  searchManager: {fileID: 695601615}
-  storageRoomScript: {fileID: 725256438}
---- !u!4 &247571486
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 247571484}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 639.0365, y: 261.8566, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &280662333
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695601616}
   - component: {fileID: 695601615}
+  - component: {fileID: 695601617}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -616,54 +564,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &725256437
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 725256439}
-  - component: {fileID: 725256438}
-  m_Layer: 0
-  m_Name: StorageLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &725256438
+--- !u!114 &695601617
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725256437}
+  m_GameObject: {fileID: 695601614}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b5a4cc31232989429eaaacd045e5b81, type: 3}
+  m_Script: {fileID: 11500000, guid: 161b82d1cb6b344409f54e05e87e7835, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StorageLocationManager
-  storageEvidence:
-  - {fileID: 11400000, guid: 1ba5c23a733c4d84eb07782b2e9a2390, type: 2}
-  - {fileID: 11400000, guid: 56373dc63ca41ad4c9ce378d85ed2f82, type: 2}
-  roomCoordinates: {x: 25, y: 0}
---- !u!4 &725256439
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725256437}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.20452, y: 13.49902, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
 --- !u!1 &776223162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,9 +1971,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 695601615}
-        m_TargetAssemblyTypeName: OfficerSearchManager, Assembly-CSharp
-        m_MethodName: BackToMainMenu
+      - m_Target: {fileID: 695601617}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2172,7 +2084,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 247571485}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StudyLocationManager, Assembly-CSharp
         m_MethodName: MoveToStorage
         m_Mode: 1
@@ -2509,7 +2421,7 @@ Transform:
   m_GameObject: {fileID: 2143074791}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 125, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2571,7 +2483,5 @@ SceneRoots:
   - {fileID: 20536128}
   - {fileID: 1015330037}
   - {fileID: 859386596}
-  - {fileID: 247571486}
   - {fileID: 695601616}
-  - {fileID: 725256439}
   - {fileID: 1431060970}

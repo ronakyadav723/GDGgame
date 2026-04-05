@@ -108,8 +108,4 @@ public class OfficerSearchManager : MonoBehaviour
         ShowNextDiscovery();
         searchButton.interactable = true;
     }
-    public void BackToMainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
 }

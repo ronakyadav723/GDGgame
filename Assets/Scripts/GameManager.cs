@@ -30,5 +30,9 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+    public void MoveToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 }
