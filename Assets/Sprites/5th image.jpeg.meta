@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9ca53cceda37d0440901af805e0a9043
+guid: 02753a73e05a458498c3c6e7097bdbf6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8705929072699811134
-    second: Dialogue_box-removebg-preview_0
+      213: -8035979607213234513
+    second: 5th image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dialogue_box-removebg-preview_0
+      name: 5th image_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 60
-        width: 539
-        height: 310
+        x: 0
+        y: 0
+        width: 1280
+        height: 731
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ca5bf562a35e2780800000000000000
-      internalID: -8705929072699811134
+      spriteID: fa6a5c9af177a7090800000000000000
+      internalID: -8035979607213234513
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dialogue_box-removebg-preview_0: -8705929072699811134
+      5th image_0: -8035979607213234513
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

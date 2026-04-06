@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 177c7778b5c5e374386cf1182307dad7
+guid: 0f0bca8a036d90045a6406b728d419ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -924572387510989830
-    second: investigation_background_0
+      213: 5853238408844449392
+    second: 3rd image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: investigation_background_0
+      name: 3rd image_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 636
-        height: 360
+        width: 1344
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afbc549ef424b23f0800000000000000
-      internalID: -924572387510989830
+      spriteID: 07698d03251ea3150800000000000000
+      internalID: 5853238408844449392
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      investigation_background_0: -924572387510989830
+      3rd image_0: 5853238408844449392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

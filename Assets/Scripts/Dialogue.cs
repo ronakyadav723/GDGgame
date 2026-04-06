@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
+using Unity.Loading;
 
 public class Dialogue : MonoBehaviour
 {
@@ -9,18 +11,19 @@ public class Dialogue : MonoBehaviour
     public string[] lines;
     public float textspeed=0.01f;
     private int index;
+    private int i=0;
     void Start()
     {
         textcomponent.text=string.Empty;
         StartDialogue();
     }
-    void Update()
+    public void NextButton()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
+             i++;
             if (textcomponent.text == lines[index])
             {
                 NextLine();
+                
 
             }
             else
@@ -28,7 +31,12 @@ public class Dialogue : MonoBehaviour
                 StopAllCoroutines();
                 textcomponent.text=lines[index];
             }
+        if (i > 5)
+        {
+            SceneManager.LoadScene("MainMenu");
         }
+        
+        
     }
     void StartDialogue()
     {
@@ -64,5 +72,9 @@ public class Dialogue : MonoBehaviour
      StopAllCoroutines();
     StartCoroutine(TypeLine());
  }
+ public void SkipScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 }

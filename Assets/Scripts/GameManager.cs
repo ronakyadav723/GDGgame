@@ -20,12 +20,9 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("MainMenu");
-    }
-    public void Story()
-    {
         SceneManager.LoadScene("Story");
     }
+   
     public void Quit()
     {
         Application.Quit();
