@@ -12,7 +12,7 @@ public class APIManager : MonoBehaviour
     public static APIManager Instance { get; private set; }
 
     [Header("Backend URL (no trailing slash)")]
-    public string baseUrl = "https://gameaitesting-production.up.railway.app";
+    public string baseUrl = "https://gameaitesting-production.up.railway.app/docs#/";
     public float timeoutSeconds = 20f;
 
     // Events

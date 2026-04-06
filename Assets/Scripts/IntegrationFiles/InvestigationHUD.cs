@@ -16,8 +16,8 @@ using UnityEngine.UI;
 public class InvestigationHUD : MonoBehaviour
 {
     [Header("Drag from Hierarchy")]
-    public TextMeshProUGUI dialogueText;   // Text (TMP) inside Panel
-    public TMP_InputField  playerInput;    // PlayerInput → TMP_InputField
+    public TextMeshProUGUI dialogueText;   // Text (TMP) inside Panel      
+    public TMP_InputField  playerInput;    // PlayerInput → TMP_InputField   
     public Button          askButton;      // ASK button
     // public Button          continueButton; // CONTINUE button (goes back to MainMenu)
     //public TextMeshProUGUI npcNameLabel;   // optional — shows who you're talking to
@@ -49,10 +49,26 @@ public class InvestigationHUD : MonoBehaviour
         //   npcNameLabel.text = Capitalize(_activeNpc);
 
         // Show last reply if re-entering the scene
-        if (!string.IsNullOrEmpty(SceneData.LastNpcReply))
-            dialogueText.text = SceneData.LastNpcReply;
-        else
-            dialogueText.text = $"You are speaking with {Capitalize(_activeNpc)}.";
+
+        switch (_activeNpc)
+        {
+            case "bell" :
+            dialogueText.text="Why are you wasting my time with this nonsense?";
+            break;
+            case "graves":
+            dialogueText.text="What do you want? I've got work to do.";
+            break;
+            case "arjun" :
+            dialogueText.text="Yes? How can I assist you with your investigation?";
+            break;
+            case "officer" :
+            dialogueText.text="Let's review the case. What do you want to discuss?";
+            break;
+            default :
+            dialogueText.text="INVALID INPUT";
+            break;
+        }
+            
 
         // Wire ASK button
         askButton.onClick.AddListener(OnAskClicked);
@@ -60,9 +76,20 @@ public class InvestigationHUD : MonoBehaviour
         // CONTINUE just goes back to MainMenu (your existing NavigationManager
         // already handles this — no change needed)
     }
+    
 
     // ── Called when player clicks ASK ────────────────────────
-
+ 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return)) 
+        {
+            if (playerInput.text.Length > 2)
+            {
+                OnAskClicked();
+            }
+        }
+    }
     public void OnAskClicked()
     {
         string text = playerInput.text.Trim();
@@ -83,7 +110,7 @@ public class InvestigationHUD : MonoBehaviour
     
 
         // If you want the typewriter effect, call your Dialogue.cs here:
-         GetComponent<Dialogue>().StartWithText(reply);
+      //   GetComponent<Dialogue>().StartWithText(reply);
         // (requires adding a public StartWithText method to Dialogue.cs — see note)
     }
 

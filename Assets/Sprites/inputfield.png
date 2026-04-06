@@ -1,0 +1,340 @@
+<svg viewBox="0 0 1400 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="parchment-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf6ed;stop-opacity:0.95" />
+      <stop offset="50%" style="stop-color:#f4e8d0;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#e8d5b7;stop-opacity:0.95" />
+    </linearGradient>
+    
+    <linearGradient id="gold-frame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f4e4a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a0892c;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="button-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a961;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b8965f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b7355;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="dropdown-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fdfbf7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f9f3e3;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="vignette">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="70%" style="stop-color:#000000;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <!-- Filters -->
+    <filter id="paper-texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="noise"/>
+      <feDiffuseLighting in="noise" lighting-color="#f4e8d0" surfaceScale="0.5">
+        <feDistantLight azimuth="45" elevation="60"/>
+      </feDiffuseLighting>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feComposite operator="atop" in2="SourceGraphic"/>
+    </filter>
+    
+    <filter id="shadow-deep">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feFlood flood-color="#1a0f05" flood-opacity="0.5"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow-soft">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#2d1810" flood-opacity="0.35"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="inner-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#3d2817" flood-opacity="0.3"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background (semi-transparent for game view) -->
+  <rect width="1400" height="800" fill="#1a0f05" opacity="0.3"/>
+  <rect width="1400" height="800" fill="url(#vignette)"/>
+  
+  <!-- Main UI Container with ornate frame -->
+  <g transform="translate(350, 150)">
+    <!-- Decorative outer frame -->
+    <g filter="url(#shadow-deep)">
+      <!-- Corner ornaments -->
+      <path d="M 0,0 L 60,0 L 60,8 L 50,8 Q 45,8 45,13 L 45,60 L 37,60 L 37,15 Q 37,8 30,8 L 8,8 L 8,60 L 0,60 Z" 
+            fill="url(#gold-frame)"/>
+      <path d="M 700,0 L 640,0 L 640,8 L 650,8 Q 655,8 655,13 L 655,60 L 663,60 L 663,15 Q 663,8 670,8 L 692,8 L 692,60 L 700,60 Z" 
+            fill="url(#gold-frame)"/>
+      <path d="M 0,500 L 60,500 L 60,492 L 50,492 Q 45,492 45,487 L 45,440 L 37,440 L 37,485 Q 37,492 30,492 L 8,492 L 8,440 L 0,440 Z" 
+            fill="url(#gold-frame)"/>
+      <path d="M 700,500 L 640,500 L 640,492 L 650,492 Q 655,492 655,487 L 655,440 L 663,440 L 663,485 Q 663,492 670,492 L 692,492 L 692,440 L 700,440 Z" 
+            fill="url(#gold-frame)"/>
+      
+      <!-- Main decorative border -->
+      <rect x="15" y="15" width="670" height="470" rx="8" 
+            fill="none" stroke="url(#gold-frame)" stroke-width="6"/>
+      <rect x="22" y="22" width="656" height="456" rx="6" 
+            fill="none" stroke="#f4e4a6" stroke-width="2" opacity="0.7"/>
+      
+      <!-- Inner content area -->
+      <rect x="35" y="35" width="630" height="430" rx="4" 
+            fill="url(#parchment-bg)" filter="url(#paper-texture)"/>
+      
+      <!-- Decorative divider line -->
+      <line x1="80" y1="180" x2="620" y2="180" stroke="url(#gold-frame)" stroke-width="2" opacity="0.4"/>
+      <circle cx="350" cy="180" r="6" fill="url(#gold-frame)"/>
+      <circle cx="350" cy="180" r="3" fill="#f4e4a6"/>
+    </g>
+    
+    <!-- Section 1: Talk to Suspect -->
+    <g transform="translate(80, 70)">
+      <!-- Section title with decorative elements -->
+      <text x="270" y="0" font-family="'Cinzel', 'Crimson Text', serif" font-size="28" 
+            font-weight="600" fill="#2d1810" text-anchor="middle" letter-spacing="2">
+        Talk to Suspect
+      </text>
+      <line x1="0" y1="15" x2="110" y2="15" stroke="#a0892c" stroke-width="1" opacity="0.5"/>
+      <line x1="430" y1="15" x2="540" y2="15" stroke="#a0892c" stroke-width="1" opacity="0.5"/>
+      
+      <!-- Dropdown with ornate styling -->
+      <g transform="translate(0, 40)" filter="url(#shadow-soft)">
+        <rect x="0" y="0" width="410" height="50" rx="4" 
+              fill="url(#dropdown-bg)" stroke="#a0892c" stroke-width="2"/>
+        <rect x="3" y="3" width="404" height="44" rx="3" 
+              fill="none" stroke="#d4c4a8" stroke-width="1" opacity="0.5"/>
+        
+        <!-- Dropdown text -->
+        <text x="20" y="32" font-family="'Crimson Text', serif" font-size="22" 
+              fill="#3d2817" font-weight="500">
+          None
+        </text>
+        
+        <!-- Decorative dropdown arrow -->
+        <g transform="translate(370, 15)">
+          <path d="M 0,8 L 15,8 L 7.5,20 Z" fill="#8b7355"/>
+          <path d="M 2,9 L 13,9 L 7.5,18 Z" fill="#c9a961"/>
+        </g>
+        
+        <!-- Corner decorations -->
+        <circle cx="8" cy="8" r="2" fill="#d4af37" opacity="0.6"/>
+        <circle cx="402" cy="8" r="2" fill="#d4af37" opacity="0.6"/>
+        <circle cx="8" cy="42" r="2" fill="#d4af37" opacity="0.6"/>
+        <circle cx="402" cy="42" r="2" fill="#d4af37" opacity="0.6"/>
+      </g>
+      
+      <!-- Continue button with elegant styling -->
+      <g transform="translate(430, 40)" filter="url(#shadow-soft)">
+        <!-- Button with scroll-edge design -->
+        <rect x="0" y="0" width="110" height="50" rx="4" fill="url(#button-gradient)"/>
+        <path d="M -3,5 Q -8,10 -8,25 Q -8,40 -3,45" fill="url(#button-gradient)"/>
+        <path d="M 113,5 Q 118,10 118,25 Q 118,40 113,45" fill="url(#button-gradient)"/>
+        
+        <!-- Inner border highlight -->
+        <rect x="2" y="2" width="106" height="46" rx="3" 
+              fill="none" stroke="#f4e4a6" stroke-width="1.5" opacity="0.6"/>
+        
+        <!-- Button text -->
+        <text x="55" y="33" font-family="'Cinzel', serif" font-size="18" 
+              fill="#faf6ed" text-anchor="middle" font-weight="600" letter-spacing="1">
+          Continue
+        </text>
+        
+        <!-- Shine effect -->
+        <rect x="0" y="0" width="110" height="25" rx="4" 
+              fill="url(#gold-frame)" opacity="0.15"/>
+      </g>
+    </g>
+    
+    <!-- Section 2: Search -->
+    <g transform="translate(80, 220)">
+      <!-- Section title -->
+      <text x="270" y="0" font-family="'Cinzel', 'Crimson Text', serif" font-size="28" 
+            font-weight="600" fill="#2d1810" text-anchor="middle" letter-spacing="2">
+        Search
+      </text>
+      <line x1="0" y1="15" x2="130" y2="15" stroke="#a0892c" stroke-width="1" opacity="0.5"/>
+      <line x1="410" y1="15" x2="540" y2="15" stroke="#a0892c" stroke-width="1" opacity="0.5"/>
+      
+      <!-- Dropdown -->
+      <g transform="translate(0, 40)" filter="url(#shadow-soft)">
+        <rect x="0" y="0" width="410" height="50" rx="4" 
+              fill="url(#dropdown-bg)" stroke="#a0892c" stroke-width="2"/>
+        <rect x="3" y="3" width="404" height="44" rx="3" 
+              fill="none" stroke="#d4c4a8" stroke-width="1" opacity="0.5"/>
+        
+        <text x="20" y="32" font-family="'Crimson Text', serif" font-size="22" 
+              fill="#3d2817" font-weight="500">
+          None
+        </text>
+        
+        <g transform="translate(370, 15)">
+          <path d="M 0,8 L 15,8 L 7.5,20 Z" fill="#8b7355"/>
+          <path d="M 2,9 L 13,9 L 7.5,18 Z" fill="#c9a961"/>
+        </g>
+        
+        <circle cx="8" cy="8" r="2" fill="#d4af37" opacity="0.6"/>
+        <circle cx="402" cy="8" r="2" fill="#d4af37" opacity="0.6"/>
+        <circle cx="8" cy="42" r="2" fill="#d4af37" opacity="0.6"/>
+        <circle cx="402" cy="42" r="2" fill="#d4af37" opacity="0.6"/>
+      </g>
+      
+      <!-- Continue button -->
+      <g transform="translate(430, 40)" filter="url(#shadow-soft)">
+        <rect x="0" y="0" width="110" height="50" rx="4" fill="url(#button-gradient)"/>
+        <path d="M -3,5 Q -8,10 -8,25 Q -8,40 -3,45" fill="url(#button-gradient)"/>
+        <path d="M 113,5 Q 118,10 118,25 Q 118,40 113,45" fill="url(#button-gradient)"/>
+        
+        <rect x="2" y="2" width="106" height="46" rx="3" 
+              fill="none" stroke="#f4e4a6" stroke-width="1.5" opacity="0.6"/>
+        
+        <text x="55" y="33" font-family="'Cinzel', serif" font-size="18" 
+              fill="#faf6ed" text-anchor="middle" font-weight="600" letter-spacing="1">
+          Continue
+        </text>
+        
+        <rect x="0" y="0" width="110" height="25" rx="4" 
+              fill="url(#gold-frame)" opacity="0.15"/>
+      </g>
+    </g>
+    
+    <!-- Bottom action buttons -->
+    <g transform="translate(80, 350)">
+      <!-- Talk To Officer button -->
+      <g filter="url(#shadow-soft)">
+        <rect x="0" y="0" width="240" height="55" rx="5" fill="url(#button-gradient)"/>
+        <path d="M -4,7 Q -10,12 -10,27.5 Q -10,43 -4,48" fill="url(#button-gradient)"/>
+        <path d="M 244,7 Q 250,12 250,27.5 Q 250,43 244,48" fill="url(#button-gradient)"/>
+        
+        <rect x="3" y="3" width="234" height="49" rx="4" 
+              fill="none" stroke="#f4e4a6" stroke-width="2" opacity="0.6"/>
+        
+        <!-- Decorative corner flourishes -->
+        <path d="M 10,10 L 20,10 L 20,12 L 12,12 L 12,20 L 10,20 Z" fill="#f4e4a6" opacity="0.5"/>
+        <path d="M 230,10 L 220,10 L 220,12 L 228,12 L 228,20 L 230,20 Z" fill="#f4e4a6" opacity="0.5"/>
+        <path d="M 10,45 L 10,35 L 12,35 L 12,43 L 20,43 L 20,45 Z" fill="#f4e4a6" opacity="0.5"/>
+        <path d="M 230,45 L 230,35 L 228,35 L 228,43 L 220,43 L 220,45 Z" fill="#f4e4a6" opacity="0.5"/>
+        
+        <text x="120" y="35" font-family="'Cinzel', serif" font-size="20" 
+              fill="#faf6ed" text-anchor="middle" font-weight="600" letter-spacing="1">
+          Talk To Officer
+        </text>
+        
+        <rect x="0" y="0" width="240" height="27" rx="5" 
+              fill="url(#gold-frame)" opacity="0.15"/>
+      </g>
+      
+      <!-- Case File button -->
+      <g transform="translate(300, 0)" filter="url(#shadow-soft)">
+        <rect x="0" y="0" width="240" height="55" rx="5" fill="url(#button-gradient)"/>
+        <path d="M -4,7 Q -10,12 -10,27.5 Q -10,43 -4,48" fill="url(#button-gradient)"/>
+        <path d="M 244,7 Q 250,12 250,27.5 Q 250,43 244,48" fill="url(#button-gradient)"/>
+        
+        <rect x="3" y="3" width="234" height="49" rx="4" 
+              fill="none" stroke="#f4e4a6" stroke-width="2" opacity="0.6"/>
+        
+        <path d="M 10,10 L 20,10 L 20,12 L 12,12 L 12,20 L 10,20 Z" fill="#f4e4a6" opacity="0.5"/>
+        <path d="M 230,10 L 220,10 L 220,12 L 228,12 L 228,20 L 230,20 Z" fill="#f4e4a6" opacity="0.5"/>
+        <path d="M 10,45 L 10,35 L 12,35 L 12,43 L 20,43 L 20,45 Z" fill="#f4e4a6" opacity="0.5"/>
+        <path d="M 230,45 L 230,35 L 228,35 L 228,43 L 220,43 L 220,45 Z" fill="#f4e4a6" opacity="0.5"/>
+        
+        <text x="120" y="35" font-family="'Cinzel', serif" font-size="20" 
+              fill="#faf6ed" text-anchor="middle" font-weight="600" letter-spacing="1">
+          Case File
+        </text>
+        
+        <rect x="0" y="0" width="240" height="27" rx="5" 
+              fill="url(#gold-frame)" opacity="0.15"/>
+      </g>
+    </g>
+    
+    <!-- Decorative elements -->
+    <!-- Top center ornament -->
+    <g transform="translate(335, 25)">
+      <circle cx="15" cy="0" r="8" fill="url(#gold-frame)" filter="url(#glow)"/>
+      <path d="M 10,-5 L 15,-8 L 20,-5 L 15,-2 Z" fill="#f4e4a6"/>
+      <line x1="0" y1="0" x2="10" y2="0" stroke="#d4af37" stroke-width="2"/>
+      <line x1="20" y1="0" x2="30" y2="0" stroke="#d4af37" stroke-width="2"/>
+    </g>
+    
+    <!-- Age spots and texture details -->
+    <circle cx="100" cy="250" r="2" fill="#c4a574" opacity="0.2"/>
+    <circle cx="580" cy="180" r="1.5" fill="#c4a574" opacity="0.25"/>
+    <circle cx="350" cy="400" r="2.5" fill="#c4a574" opacity="0.15"/>
+    <circle cx="150" cy="120" r="1.8" fill="#c4a574" opacity="0.2"/>
+    <circle cx="520" cy="340" r="2" fill="#c4a574" opacity="0.18"/>
+  </g>
+  
+  <!-- Subtle dust particles floating -->
+  <circle cx="500" cy="250" r="1.5" fill="#f4e8d0" opacity="0.3">
+    <animate attributeName="cy" values="250;200;250" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="900" cy="400" r="1" fill="#f4e8d0" opacity="0.25">
+    <animate attributeName="cy" values="400;350;400" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="10s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="500" r="1.2" fill="#f4e8d0" opacity="0.28">
+    <animate attributeName="cy" values="500;450;500" dur="9s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.28;0.55;0.28" dur="9s" repeatCount="indefinite"/>
+  </circle>
+</svg>
+
+This is a complete, polished UI replacement featuring:
+
+**Visual Improvements:**
+- Ornate gold corner decorations with authentic vintage styling
+- Elegant serif typography (Cinzel/Crimson Text fonts)
+- Warm parchment background with paper texture
+- Deep shadows for depth and dimension
+- Decorative dividers and flourishes
+
+**Better Design Elements:**
+- Styled dropdowns with corner accents and elegant arrows
+- Scroll-edged buttons with metallic sheen
+- Proper spacing and alignment
+- Consistent color palette (warm golds, browns, cream)
+- Subtle aging effects (spots, texture)
+
+**Atmospheric Details:**
+- Floating dust particles (animated)
+- Vignette effect
+- Soft glows on decorative elements
+- Layered shadows
+
+**To use this in Unity:**
+1. Save this as SVG and convert to PNG (1400x800px recommended)
+2. Slice it into individual elements (buttons, dropdowns, frames)
+3. Use as 9-sliced sprites for scalability
+4. Apply the same color scheme (#d4af37 gold, #f4e8d0 parchment, #2d1810 text)
+
+Would you like me to export individual button/dropdown sprites separately, or create a version with different text/layout?

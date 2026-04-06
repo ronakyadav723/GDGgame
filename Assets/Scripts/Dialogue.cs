@@ -7,7 +7,7 @@ public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textcomponent;
     public string[] lines;
-    public float textspeed;
+    public float textspeed=0.01f;
     private int index;
     void Start()
     {
@@ -16,7 +16,7 @@ public class Dialogue : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (textcomponent.text == lines[index])
             {
